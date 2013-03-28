@@ -12,4 +12,4 @@ def reader(name, sheetVert): #read intermediate output file
 	
 #return array
 def spiral_array():
-	return scafarray
+	return spiral

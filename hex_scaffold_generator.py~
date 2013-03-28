@@ -1,0 +1,19 @@
+"""
+Hexagonal Scaffold Generator
+"""
+
+#declare lists
+bases = []
+helices = []
+
+def generator(plotted_helices, num_bases, total_helices):	#generate hexagonal scaffod in list form (convert to caDNAno later)
+	"""
+	the form of the helices sublists are as follows:
+	[x, y, thickness, high or low (0 or 1), angle (helix angle, not base angle), direction]
+	the helix number is indicated by the index of the list in array helices
+	"""
+	working_helix = []	#list used to temporarily hold sublists from plotted_helices
+	current_helix = 0
+	
+	while current_helix <= total_helices:
+

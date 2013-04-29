@@ -16,7 +16,7 @@ def plot(sheetVert, sheetLayers, name):
 	
 	while plottingLayer <= sheetLayers:
 		if plottingLayer == 1:
-			plotted_helices.append([xcoord,ycoord,plottingLayer,angle])
+			plotted_helices.append([xcoord,ycoord,angle,plottingLayer])
 			if vertNum == 0:
 				xcoord -= 1
 				angle = 180
@@ -44,7 +44,7 @@ def plot(sheetVert, sheetLayers, name):
 			
 			while vertNum <= layerVerts:
 				#alternate = 0
-				plotted_helices.append([xcoord,ycoord,angle,lottingLayer])
+				plotted_helices.append([xcoord,ycoord,angle,plottingLayer])
 				if angle == 135:	#135 deg
 					if alternate == 0:
 						ycoord -= 1

@@ -6,7 +6,7 @@ Hexagonal Scaffold Generator
 bases = []
 helices = []
 
-def generator(plotted_helices, num_bases, total_helices):	#generate hexagonal scaffod in list form (convert to caDNAno later)
+def generator(plotted_helices, num_bases, total_helices, thickness):	#generate hexagonal scaffod in list form (convert to caDNAno later)
 	"""
 	the form of the helices sublists are as follows:
 	[x,y,angle(helix angle, not base angle),thickness,high/low(0 or 1),direction(up:1,down:0)]
@@ -18,4 +18,6 @@ def generator(plotted_helices, num_bases, total_helices):	#generate hexagonal sc
 	while current_helix <= total_helices:
 		working_helix = plotted_helices(current_helix)
 		if working_helix(3) == 45: 	#helix angle = 45deg
-			
+			working_helix(4)= thickness+7
+			working_helix(5)= 0
+

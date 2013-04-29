@@ -1,7 +1,8 @@
 """
 Hexagonal slice plotter rev1
 """
-	
+plotted_helices = []
+
 def plot(sheetVert, sheetLayers, name):
 	out= open (name + "_intermediate.csv", 'w')
 	totalVerts = sheetVert - 1	#start numbering at 0 rather than 1
@@ -15,7 +16,7 @@ def plot(sheetVert, sheetLayers, name):
 	
 	while plottingLayer <= sheetLayers:
 		if plottingLayer == 1:
-			out.write(str(vertNum) + "," + str(xcoord) + "," + str(ycoord) + "," + str(plottingLayer)+ ","+str(angle)+"\n")
+			plotted_helices.append([xcoord,ycoord,plottingLayer,angle])
 			if vertNum == 0:
 				xcoord -= 1
 				angle = 180
@@ -43,7 +44,7 @@ def plot(sheetVert, sheetLayers, name):
 			
 			while vertNum <= layerVerts:
 				#alternate = 0
-				out.write(str(vertNum) + "," + str(xcoord) + "," + str(ycoord) + ","+ str(plottingLayer)+ "," + str(angle)+"\n")
+				plotted_helices.append([xcoord,ycoord,plottingLayer,angle])
 				if angle == 135:	#135 deg
 					if alternate == 0:
 						ycoord -= 1
@@ -109,3 +110,5 @@ def plot(sheetVert, sheetLayers, name):
 				vertNum += 1
 			plottingLayer += 1
 			wrapChange += 2
+def 2dplot():
+	return plotted_helices

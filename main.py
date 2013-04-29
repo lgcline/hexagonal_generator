@@ -26,4 +26,4 @@ hexplot.plot(sheetVert, sheetLayers, name)
 #run the scaffold generator
 plotted_helices = hexplot.2dplot()
 hexscafgen=hex_scaffold_generator
-hexscafgen.generator(plotted_helices, numBases, sheetVert)
+hexscafgen.generator(plotted_helices, numBases, sheetVert, sheetThickness)
